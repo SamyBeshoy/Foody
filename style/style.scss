@@ -1,0 +1,32 @@
+// import global file
+@use "global" as *;
+
+// import variables file
+@use "variables" as *;
+
+// import header file
+@use "header" as *;
+
+// import landing file
+@use "landing" as *;
+
+// import about file
+@use "about" as *;
+
+// import features file
+@use "features" as *;
+
+// import products file
+@use "products" as *;
+
+// import adsense file
+@use "adsense" as *;
+
+// import customer file
+@use "customer" as *;
+
+// import blog file
+@use "blog" as *;
+
+// import footer file
+@use "footer" as *;

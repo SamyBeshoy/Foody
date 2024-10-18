@@ -1,0 +1,212 @@
+// import variables file
+@use "variables" as *; 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: sans-serif;
+    animation: animation_for_body 0.75s;
+}
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+}
+@media (max-width: 370px) {
+    html {
+        font-size: 13px;
+    }
+}
+@media (max-width: 301px) {
+    html {
+        font-size: 11px;
+    }
+}
+@keyframes animation_for_body {
+    from {
+        opacity: 0;
+        transform: translatey(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translatey(0px);
+    }
+}
+// -----media queries from bootstrap-----
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+    .container {
+        width: 550px;
+    }
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+    .container {
+        width: 750px;
+    }
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+    .container {
+        width: 970px;
+    }
+}
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+// global rules for html
+section {
+    padding: $padding 0;
+}
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: sans-serif;
+    margin-bottom: 30px;
+    hr:nth-child(1) {
+        width: 80px;
+        background-color: $main_color;
+        height: 1px;
+    }
+    hr:nth-child(2) {
+        width: 120px;
+        background-color: red;
+        height: 1px;
+    }
+    .title_f {
+        font-size: $font_three;
+        font-weight: bold;
+    }
+    .paragraph {
+        font-size: $font_five;
+    }
+}
+.title_second {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    .one {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: center;
+        font-family: sans-serif;
+        hr:nth-child(1) {
+            width: 80px;
+            background-color: $main_color;
+            height: 1px;
+        }
+        hr:nth-child(2) {
+            width: 120px;
+            background-color: red;
+            height: 1px;
+        }
+        .title_f {
+            font-size: $font_three;
+            font-weight: bold;
+        }
+        .paragraph {
+            font-size: $font_five;
+        }
+    }
+    .two {
+        display: flex; 
+        gap: 10px;
+    }
+}
+@media (max-width: 1000px) {
+    .title_second {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        .one {
+            align-items: center;
+        }
+    }
+}
+.btn {
+    border: 2px solid $main_color;
+    text-decoration: none;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: $main_color;
+    transition: 0.5s;
+    &:hover {
+        background-color: $main_color;
+        color: white;
+    }
+}
+.activeBtn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: $main_color;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: fit-content;
+}
+.inactiveBtn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid $main_color;
+    color: black;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: $main_color;
+    transition: 0.5s;
+    &:hover {
+        background-color: $main_color;
+        color: white;
+    }
+}
+.top {
+    &.show {
+        display: none;
+    }
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: $main_color;
+    color: white;
+    font-weight: bold;
+    font-size: $font_six;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 454544444;
+    cursor: pointer;
+    transition: 0.2s;
+}
+@media (max-width: 450px) {
+    html {
+        font-size: 14px;
+    }
+}
+@media (max-width: 330px) {
+    html {
+        font-size: 13px;
+    }
+}
+@media (max-width: 300px) {
+    html {
+        font-size: 12px;
+    }
+}

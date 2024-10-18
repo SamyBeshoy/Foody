@@ -1,0 +1,52 @@
+// import variables file
+@use "variables" as *;
+.adsense {
+    background-color: $main_color;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .boxOne {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            div:nth-child(1) {
+                font-size: $font_three;
+                font-weight: bold;
+                color: white;
+            }
+            div:nth-child(2) {
+                font-size: $font_six;
+                color: white;
+            }
+        }
+        .boxTwo {
+            a {
+                border: 2px solid #F65005;
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+                width: fit-content;
+                border-radius: 20px;
+                padding: 10px 20px;
+                transition: 0.5s;
+                background-color: #F65005;
+                font-size: $font_six;
+                &:hover {
+                    background-color: #f3773e;
+                    border: 2px solid #f3773e;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1000px) {
+    .adsense {
+        .container {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+    }
+}

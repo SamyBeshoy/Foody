@@ -1,0 +1,41 @@
+// import variables file
+@use "variables" as *;
+.blog {
+    .container {
+        .boxs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            .box {
+                width: fit-content;
+                background-color: #F7F8FC;
+                img {
+                    width: 18.75em;
+                }
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    padding: 20px;
+                    div:nth-child(1) {
+                        font-weight: bold;
+                        font-size: $font_six;
+                        &:hover {
+                            color: $main_color;
+                        }
+                    }
+                    div:nth-child(2) {
+                        display: flex;
+                        gap: 20px;
+                        font-size: $font_six;
+                        i {
+                            color: $main_color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

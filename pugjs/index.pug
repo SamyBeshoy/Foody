@@ -1,0 +1,303 @@
+include mixin.pug
+doctypehtml
+html(lang="en")
+    block head
+        head
+            +head("Foody")
+    body
+        block scroll_btn
+            <span class="top show"><i class="fa-solid fa-arrow-up"></i></span>
+        block sub_header
+            .subheader
+                .container
+                    .boxOne
+                        span <i class="fa-solid fa-location-dot"></i> 123 Street, New York, USA
+                        span <i class="fa-regular fa-clock"></i> Mon - Fri : 09.00 AM - 09.00 PM
+                    .boxTwo
+                        span <i class="fa-solid fa-phone"></i> +012 345 6789
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <i class="fa-brands fa-instagram"></i>
+        block header
+            header
+                .container 
+                    .logo
+                        a(href="index.html") 
+                            span F
+                            span oo
+                            span dy
+                    nav
+                        span: a.active(href="index.html") Home
+                        span: a(href="about.html") About 
+                        span: a(href="products.html") Products
+                        span.page#pageMenu
+                            a(href="#page") Pages 
+                            #menubar 
+                                span: a(href="blog.html") Blog Grid
+                                span: a(href="features.html") Our Features
+                                span: a(href="testimonial.html") Testimonial
+                        span: a(href="index.html") Contact
+                        span.icons_header: <i class="fa-solid fa-magnifying-glass"></i> <i class="fa-solid fa-user"></i> <i class="fa-solid fa-bag-shopping"></i>
+                    .sidenav#sidenav 
+                        div.parent 
+                            div.ch1
+                                span: a(href="index.html")
+                                        span F
+                                        span oo
+                                        span dy
+                            div.ch2    
+                                a(href="##" class="closebtn" onclick="closeNav()") &times;
+                        div
+                            a(href="index.html") Home
+                            a(href="about.html") About
+                            a(href="products.html") Products
+                            a(href="blog.html") Blog Grid
+                            a(href="features.html") Our Features
+                            a(href="testimonial.html") Testimonial
+                            a(href="index.html") Contact
+                    .boxThree
+                        <span onclick="openNav()"class="tog"><i class="fa-solid fa-bars"></i></span> 
+        block landing
+            .landing#landing
+                .container
+                    .text Natural Food
+                        br 
+                        | Is Always Healthy
+        block about
+            section.about
+                .container
+                    .boxOne 
+                        img(src="imgs/about.jpg", alt="Farmer")
+                    .boxTwo
+                        div Best Organic Fruits 
+                            br 
+                            | And Vegetables
+                        div Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.
+                        a(href="#").btn Read More
+        block features
+            section.features
+                .container 
+                    .title
+                        hr
+                        hr
+                        .title_f Our Features
+                        .paragraph Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. 
+                            br 
+                            | Ipsum diam justo sed rebum vero dolor duo.
+                    .boxs
+                        .box
+                            .img
+                                img(src="imgs/icon-1.png", alt="icon")
+                            div Natural Process
+                            div Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.
+                            a(href="#").btn Read More
+                        .box
+                            .img
+                                img(src="imgs/icon-2.png", alt="icon")
+                            div Organic Products
+                            div Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.
+                            a(href="#").btn Read More
+                        .box
+                            .img
+                                img(src="imgs/icon-3.png", alt="icon")
+                            div Biologically Safe
+                            div Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.
+                            a(href="#").btn Read More
+        block products
+            section.products
+                .container
+                    .title_second
+                        .one 
+                            hr
+                            hr
+                            .title_f Our Products
+                            .paragraph Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. 
+                                br 
+                                | Ipsum diam justo sed rebum vero dolor duo.
+                        .two
+                            span.activeBtn#btnOne All
+                            span.inactiveBtn#btnTwo Vegetables
+                            span.inactiveBtn#btnThree Fruits
+                    .boxs
+                        .boxProduct
+                            .img
+                                img(src="imgs/product-1.jpg", alt="icon")
+                            div Fresh Tomato
+                            div
+                                span $19.00
+                                span $29.00
+                            div 
+                                span View detail
+                                span Add to cart
+                        .boxProduct 
+                            .img
+                                img(src="imgs/product-2.jpg", alt="icon")
+                            div Fresh Pineapple
+                            div
+                                span $19.00
+                                span $29.00
+                            div 
+                                span View detail
+                                span Add to cart
+                        .boxProduct
+                            .img
+                                img(src="imgs/product-3.jpg", alt="icon")
+                            div Fresh Hot Pepper
+                            div
+                                span $19.00
+                                span $29.00
+                            div 
+                                span View detail
+                                span Add to cart
+                        .boxProduct
+                            .img
+                                img(src="imgs/product-4.jpg", alt="icon")
+                            div Fresh Strawberry
+                            div
+                                span $19.00
+                                span $29.00
+                            div 
+                                span View detail
+                                span Add to cart
+                        .boxProduct
+                            .img
+                                img(src="imgs/product-5.jpg", alt="icon")
+                            div Fresh Cucumber
+                            div
+                                span $19.00
+                                span $29.00
+                            div 
+                                span View detail
+                                span Add to cart
+                        .boxProduct
+                            .img
+                                img(src="imgs/product-6.jpg", alt="icon")
+                            div Fresh Tomato
+                            div
+                                span $19.00
+                                span $29.00
+                            div 
+                                span View detail
+                                span Add to cart
+                        .boxProduct
+                            .img
+                                img(src="imgs/product-7.jpg", alt="icon")
+                            div Fresh Potato
+                            div
+                                span $19.00
+                                span $29.00
+                            div 
+                                span View detail
+                                span Add to cart
+                        .boxProduct
+                            .img
+                                img(src="imgs/product-8.jpg", alt="icon")
+                            div Fresh Banana
+                            div
+                                span $19.00
+                                span $29.00
+                            div 
+                                span View detail
+                                span Add to cart
+        block adsense
+            section.adsense
+                .container
+                    .boxOne
+                        div Visit Our Farm
+                        div Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et 
+                            br
+                            |eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore 
+                            br
+                            | erat amet. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.
+                    .boxTwo: a(href="#") Visit Now
+        block customer
+            section.customer
+                .container
+                    .title
+                        hr
+                        hr
+                        .title_f Customer Review
+                        .paragraph Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. 
+                            br 
+                            | Ipsum diam justo sed rebum vero dolor duo.
+                    .box
+                        div Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et
+                        div 
+                            span: img(src="imgs/testimonial-1.jpg", alt="human")
+                            div
+                                span Client Name
+                                span Profession
+        block blog
+            section.blog 
+                .container
+                    .title
+                        hr
+                        hr
+                        .title_f Latest Blog
+                        .paragraph Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. 
+                            br 
+                            | Ipsum diam justo sed rebum vero dolor duo.
+                    .boxs
+                        .box
+                            img(src="imgs/blog-1.jpg", alt="blog")
+                            .text
+                                div How to cultivate organic fruits 
+                                    br 
+                                    | and vegetables in own firm
+                                div 
+                                    span <i class="fa-solid fa-user"></i> Admin
+                                    span <i class="fa-solid fa-calendar"></i> 01 Jan, 2020
+                        .box
+                            img(src="imgs/blog-2.jpg", alt="blog")
+                            .text
+                                div How to cultivate organic fruits 
+                                    br 
+                                    | and vegetables in own firm
+                                div 
+                                    span <i class="fa-solid fa-user"></i> Admin
+                                    span <i class="fa-solid fa-calendar"></i> 01 Jan, 2020
+                        .box
+                            img(src="imgs/blog-3.jpg", alt="blog")
+                            .text
+                                div How to cultivate organic fruits 
+                                    br 
+                                    | and vegetables in own firm
+                                div 
+                                    span <i class="fa-solid fa-user"></i> Admin
+                                    span <i class="fa-solid fa-calendar"></i> 01 Jan, 2020
+        block footer
+            .footer
+                .container
+                    .boxs
+                        .boxOne
+                            div F
+                                span oo
+                                | dy
+                            div Diam dolor diam ipsum sit. Aliqu diam 
+                                br
+                                | amet diam et eos. Clita erat ipsum et
+                                br
+                                |  lorem et sit, sed stet lorem sit clita
+                            div
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <i class="fa-brands fa-youtube"></i>
+                                <i class="fa-brands fa-linkedin-in"></i>
+                        .boxTwo
+                            div Address
+                            div <i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;&nbsp;123 Street, New York, USA
+                            div <i class="fa-solid fa-phone"></i>&nbsp;&nbsp;+012 345 67890
+                            div <i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;info@example.com
+                        .boxThree
+                            div Newsletter
+                            div Dolor amet sit justo amet 
+                                br
+                                | elitr clita ipsum elitr est.
+                            div
+                                input(type="text", name="yourMail", placeholder="Your Email")
+                                input(type="button", value="Sign Up")
+                    hr
+                    footer Copyright 2024 © by Beshoy Samy.
+        block scripts 
+            script(src="script/dist/main.js")

@@ -1,0 +1,45 @@
+// import variables file
+@use "variables" as *;
+.features {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.055), rgba(0, 0, 0, 0.055)), url(../imgs/bg-icon.png);
+    height: fit-content;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    .container {
+        .boxs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            .box {
+                width: 300px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 20px;
+                img {
+                    width: 5.625em;
+                }
+                div:nth-child(2) {
+                    font-weight: bold;
+                    font-size: $font_five;
+                }
+                div:nth-child(3) {
+                    font-size: $font_six;
+                }
+                a {
+                    font-size: $font_six;
+                }
+            }
+        }
+    }
+}
